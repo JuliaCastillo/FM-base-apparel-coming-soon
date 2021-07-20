@@ -79,6 +79,16 @@ h1 span {
   max-width: 40ch;
 }
 
+.not-valid {
+  border: 2px hsl(0, 93%, 68%) solid;
+
+}
+
+.not-valid input[type=text] {
+  color: hsl(0, 93%, 68%);
+}
+
+
 input[type=text] {
   border: none;
   flex-grow: 2;
