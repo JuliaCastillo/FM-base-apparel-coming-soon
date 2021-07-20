@@ -9,6 +9,8 @@ body {
   color: hsl(0, 36%, 70%);
   margin: 0;
   font-size: 16px;
+  min-height: 0;
+  min-width: 0;
   /* width: 100%; */
   /* display: block; */
 }
@@ -74,15 +76,22 @@ h1 span {
   border-radius: 50px;
   width: 100%;
   height: 48px;
+  max-width: 40ch;
 }
 
 input[type=text] {
   border: none;
   flex-grow: 2;
-  font-size: 14px;
+  font-size: 0.9rem;
   padding: 20px;
   border-radius: 50px;
+  color: hsl(0, 36%, 70%);
 }
+
+input[type=text]:focus {
+  outline: none;
+}
+
 
 input::placeholder {
   color: hsl(0, 36%, 70%);
@@ -96,6 +105,16 @@ button {
   height: 48px;
   width: 63px;
   box-shadow: 0 10px 15px rgb(230, 204, 204);
+  transition: all 0.3s ease-in;
+}
+
+button img {
+  transform: scale(0.8);
+}
+
+button:hover, button:active {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, hsl(0, 80%, 90%), hsl(0, 74%, 85%));
 }
 
 
@@ -103,21 +122,26 @@ button {
 
   main {
     display: grid;
-    /* grid-template-columns: 1fr 610px;
-    grid-template-rows: 60px 1fr 20px; */
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     /*height: 100vh;
     width: 100vw; */
+    background-image: url(images/bg-pattern-desktop.svg); 
+    background-repeat: no-repeat;
   }
+
+  .logo img {
+    margin: 60px;
+    transform: scale(1);
+  }
+
   .hero-image {
     grid-row: 1 / 4;
     grid-column: 2 / 3;
     background-image: url(images/hero-desktop.jpg);
+    background-position: center;
     height: 800px;
-    width: 610px;
-  }
-
-  .content {
-    margin: 200px;
+    width: 300px;
   }
 
   h1 {
@@ -128,6 +152,46 @@ button {
   .content p {
     text-align: start;
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .logo img {
+    margin: 60px 150px;
+  }
+
+  .hero-image {
+    width: 610px;
+  }
+
+  .content {
+    align-items: flex-start;
+    margin: 10px 50px 60px 150px;
+  }
+
+  .content p {
+    max-width: 45ch;
+  }
+
+  .inp-group {
+    height: 55px;
+    max-width: 45ch;
+    border-radius: 40px;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  button {
+    height: 55px;
+    width: 100px;
+    border-radius: 40px;
+  }
+
+  button img {
+    transform: scale(1);
   }
 }
 
