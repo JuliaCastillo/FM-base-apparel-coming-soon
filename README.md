@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/mobilefirst-coming-soon-page-using-grid-and-flexbox-2tkx3ott1)
 - Live Site URL: [Live site URL here](https://juliacastillo.github.io/FM-base-apparel-coming-soon/)
 
 ## My process
