@@ -130,8 +130,7 @@ button:hover {
 p.warning {
   display: none;
   color: hsl(0, 93%, 68%);
-  font-size: 0.3rem;
-  margin-left: 20px;
+  font-size: 0.8rem;
 }
 
 img.warning {
@@ -179,6 +178,7 @@ img.warning {
 
   p.warning {
     font-size: 0.9rem;
+    margin-left: 20px;
   }
 }
 
